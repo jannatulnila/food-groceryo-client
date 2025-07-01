@@ -67,7 +67,7 @@ const Banner = () => {
   };
 
   return (
-    <div className="w-full h-[400px] md:h-[600px] overflow-hidden">
+    <div className="w-full h-[300px] md:h-[500px] overflow-hidden">
       <Slider ref={sliderRef} {...settings}>
         {slides.map((slide) => (
           <div key={slide.id}>

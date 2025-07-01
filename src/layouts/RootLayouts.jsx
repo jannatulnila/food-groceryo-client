@@ -5,10 +5,12 @@ import Footer from '../Shared/Footer';
 
 const RootLayouts = () => {
     return (
-        <div className=' mx-auto'>   
+        <div className=' flex flex-col min-h-screen'>   
         {/* bg-linear-to-bl from-primary to-secondary */}
             <Navbar></Navbar>
-            <Outlet></Outlet>
+            <main className='flex-grow'>
+                <Outlet></Outlet>
+            </main>
             <Footer></Footer>
         </div>
     );

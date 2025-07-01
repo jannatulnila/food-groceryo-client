@@ -1,55 +1,45 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router';
 import { motion } from "framer-motion";
 
-const ExpairedFoodSection = () => {
-    const [expairedFood, setExpairedFood] = useState([]);
-    const [showAll, setShowAll] = useState(false);
-
+const AllExpiredFoods = () => {
+    const [expiredFoods, setExpiredFoods] = useState([]);
 
     useEffect(() => {
         axios(`${import.meta.env.VITE_API_URL}/foods/expired`)
             .then((res) => {
-                setExpairedFood(res.data)
-                console.log(res.data)
+                setExpiredFoods(res.data);
             })
             .catch(err => {
-                console.log(err)
-            })
-    }, [])
-
-    const displayedFoods = showAll ? expairedFood : expairedFood.slice(0, 6);
-
+                console.log(err);
+            });
+    }, []);
 
     return (
-        <div className=" p-4 w-11/12 mx-auto">
-            <h2 className="text-2xl font-bold text-primary text-center mb-4">Expired Food Items</h2>
-            <p className=" text-semibold text-center mb-2">
-                Expired Food Items ({expairedFood.length})
-            </p>
+        <div className="all-expired-foods p-4 w-11/12 mx-auto">
+            <h2 className="text-3xl font-bold text-primary text-center mb-6">All Expired Food Items</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {displayedFoods.length === 0 ? (
-                    <p>No expired foods found.</p>
+                {expiredFoods.length === 0 ? (
+                    <p className='text-red-600'>No expired foods found.</p>
                 ) : (
-                    displayedFoods.map((food, index) => (
+                    expiredFoods.map((food, index) => (
                         <motion.div
                             key={food._id}
-                            className="bg-red-200 rounded-xl shadow-md overflow-hidden flex flex-col md:flex-row gap-4 p-4"
+                            className="bg-red-200 relative rounded-xl shadow-md overflow-hidden flex flex-col md:flex-row gap-4 p-4"
                             initial={{ opacity: 0, y: 80 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{
-                                duration: 0.8,
+                                duration: 0.6,
                                 ease: "easeOut",
-                                delay: index * 0.3
+                                delay: index * 0.15
                             }}
                         >
-                            <div className='w-40 h-40 overflow-hidden rounded-md flex-shrink-0'>
+                            <div className="w-40 h-40 overflow-hidden rounded-md flex-shrink-0">
                                 <img
                                     src={food.image}
                                     alt={food.title}
-                                    className="w-full h-48 object-contain rounded mb-3"
+                                    className="w-full h-40 object-contain rounded "
                                 />
                             </div>
                             <div className='flex flex-col mb-4 justify-between'>
@@ -65,23 +55,8 @@ const ExpairedFoodSection = () => {
                     ))
                 )}
             </div>
-
-
-            {expairedFood.length > 6 && (
-                <div className="flex justify-center mt-6">
-                    <Link
-                        to="/allExpiredFoods"
-                        className="px-5 py-2 border border-primary text-primary hover:bg-gray-100 rounded-md transition duration-300"
-                    >
-                        View All
-                    </Link>
-                </div>
-            )}
         </div>
     );
 };
 
-export default ExpairedFoodSection;
-
-
-
+export default AllExpiredFoods;

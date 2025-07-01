@@ -80,7 +80,7 @@ const MyItems = () => {
 
     return (
         <div className="overflow-x-auto p-4 mx-auto">
-            <h2 className="text-2xl font-semibold mb-4">My Food Items</h2>
+            <h2 className="text-2xl font-bold mb-4 text-primary text-center">My Food Items</h2>
             <table className="table table-zebra w-full">
                 <thead>
                     <tr>

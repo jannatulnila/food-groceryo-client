@@ -6,7 +6,8 @@ const Fridge = () => {
     const [foods, setFoods] = useState([]);
     const [filteredFoods, setFilteredFoods] = useState([]);
     const [selectedCategory, setSelectedCategory] = useState("All");
-    const [query, setQuery]= useState("")
+    const [sortBy, setSortBy] = useState("title-asc");
+    const [query, setQuery] = useState("")
     const today = new Date();
 
 
@@ -30,15 +31,29 @@ const Fridge = () => {
             setFilteredFoods(filtered);
         }
     };
-    const searchFilteredFoods = filteredFoods.filter(food=>food.title.toLowerCase().includes(query.toLowerCase()))
+    const searchFilteredFoods = filteredFoods.filter(food => food.title.toLowerCase().includes(query.toLowerCase()));
+
+
+    // sort logic
+    const sortedFoods = [...searchFilteredFoods].sort((a, b) => {
+        const [field, order] = sortBy.split("-");
+        const titleA = a.title.toLowerCase();
+        const titleB = b.title.toLowerCase();
+        if (titleA < titleB) return order === "asc" ? -1 : 1;
+        if (titleA > titleB) return order === "asc" ? 1 : -1;
+        return 0;
+    });
+
+
+
     return (
         <div className="p-6 max-w-7xl mx-auto ">
             <div >
-                <h2 className="text-3xl font-bold text-center mb-6">Fridge Inventory</h2>
-                
+                <h2 className="text-3xl font-bold text-primary  text-center mb-6">Fridge Inventory</h2>
+
             </div>
             <div className="mb-6 text-center">
-                <input value={query} onChange={(e)=>setQuery(e.target.value)} className='input' placeholder="Type here"/>
+                <input value={query} onChange={(e) => setQuery(e.target.value)} className='input' placeholder="Type here" />
                 <select
                     value={selectedCategory}
                     onChange={handleCategoryChange}
@@ -50,10 +65,18 @@ const Fridge = () => {
                     <option value="Vegetables">Vegetables</option>
                     <option value="Snacks">Snacks</option>
                 </select>
+                <select
+                    value={sortBy}
+                    onChange={(e) => setSortBy(e.target.value)}
+                    className="select select-bordered"
+                >
+                    <option value="title-asc">Title A-Z</option>
+                    <option value="title-desc">Title Z-A</option>
+                </select>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {searchFilteredFoods.map(food => {
+                {sortedFoods.map(food => {
                     const isExpired = new Date(food.expiryDate) < today;
 
                     return (
@@ -61,11 +84,11 @@ const Fridge = () => {
                             key={food._id}
                             className=" relative bg-white rounded-xl shadow-md overflow-hidden flex flex-col md:flex-row gap-4 p-4"
                         >
-                            <div>
+                            <div className='w-40 h-40 overflow-hidden rounded-md flex-shrink-0'>
                                 <img
                                     src={food.image}
                                     alt={food.title}
-                                    className="w-full h-40 object-cover rounded mb-4"
+                                    className="w-full h-40 object-contain rounded mb-4"
                                 />
                             </div>
                             <div>

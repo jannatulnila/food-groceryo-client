@@ -1,8 +1,8 @@
 import Banner from './Banner';
 import NearlyExpairySection from '../Components/NearlyExpairySection/NearlyExpairySection';
 import ExpairedFoodSection from '../Components/ExpairedFoodSection/ExpairedFoodSection';
-import FoodStorageTips from '../Components/FoodStorageTips/FoodStorageTips';
-import ExpiryFacts from '../Components/ExpiryFacts/ExpiryFacts';
+import RecentProducts from '../Components/RecentProducts/RecentProducts';
+import OfferSection from '../Components/OfferSection/OfferSection';
 
 const Home = () => {
   
@@ -10,10 +10,10 @@ const Home = () => {
     return (
         <div>
             <Banner></Banner>
+            <OfferSection></OfferSection>
+            <RecentProducts></RecentProducts>
             <NearlyExpairySection  />
             <ExpairedFoodSection></ExpairedFoodSection>
-            <FoodStorageTips></FoodStorageTips>
-            <ExpiryFacts></ExpiryFacts>
         </div>
     );
 };

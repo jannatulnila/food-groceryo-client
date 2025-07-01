@@ -10,11 +10,13 @@ import AddFood from '../pages/AddFood/AddFood';
 import FoodDetails from '../pages/FoodDetails/FoodDetails';
 import MyItems from '../Components/MyItems';
 import PrivateRoute from '../PrivateRoute';
-import ExpairedFoodSection from '../Components/ExpairedFoodSection/ExpairedFoodSection';
+
 import Fridge from '../pages/Fridge/Fridge';
-import NearlyExpairySection from '../Components/NearlyExpairySection/NearlyExpairySection';
 import Spinner from '../pages/loading';
 import ErrorPage from '../pages/ErrorPage';
+import AllExpiredFoods from '../pages/AllExpiredFoods/AllExpiredFoods';
+import Support from '../pages/Support.jsx/Support';
+
 
 const router = createBrowserRouter([
   {
@@ -39,12 +41,20 @@ const router = createBrowserRouter([
        element:<PrivateRoute><FoodDetails></FoodDetails></PrivateRoute>
       },
       {
+        path:'/support',
+        Component: Support
+      },
+      {
         path: '/register',
         Component: Register
       },
       {
         path: '/login',
         Component: Login
+      },
+      {
+        path:'/allExpiredFoods',
+        Component: AllExpiredFoods
       },
       {
         path: '/my-foods/:email',

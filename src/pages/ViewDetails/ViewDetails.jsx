@@ -3,12 +3,12 @@ import { use, useEffect, useState } from "react";
 import Swal from "sweetalert2";
 import { AuthContext } from "../../contexts/AuthContext";
 import Countdown from 'react-countdown';
-import { Link, useLocation, useNavigate, useParams } from "react-router";
+import { Link,  useNavigate, useParams } from "react-router";
 import { IoArrowBack } from "react-icons/io5";
 import Spinner from "../loading";
 
 
-const FoodDetails = () => {
+const ViewDetails = () => {
   const { id } = useParams();
   const { user } = use(AuthContext);
   const [food, setFood] = useState(null);
@@ -35,24 +35,7 @@ const FoodDetails = () => {
       });
   }, [id, user]);
 
-  const handleAddNote = async () => {
-    if (!noteText.trim()) return;
-
-    try {
-      await axios.post(`${import.meta.env.VITE_API_URL}/foods/${id}/notes`, {
-        note: noteText,
-        userEmail: user.email
-      }, {
-        withCredentials: true
-      });
-      Swal.fire('Success', 'Note added successfully!', 'success');
-      setNoteText('');
-      const updatedFood = await axios.get(`${import.meta.env.VITE_API_URL}/foods/${id}`);
-      setFood(updatedFood.data);
-    } catch (err) {
-      Swal.fire('Error', err.response?.data?.message || 'Could not add note', 'error');
-    }
-  };
+  
 
   if (!food) {
     return (
@@ -87,32 +70,13 @@ const FoodDetails = () => {
           value={noteText}
           onChange={e => setNoteText(e.target.value)}
         />
-        <button
-          onClick={handleAddNote}
-          disabled={!isOwner}
-          className="mt-2 btn btn-primary"
-        >
-          Add Note
-        </button>
+       
       </div>
 
-      <div className="mt-6">
-        <h3 className="text-lg font-semibold">Previous Notes:</h3>
-        {food.notes?.length ? (
-          <ul className="list-disc list-inside">
-            {food.notes.map((n, i) => (
-              <li key={i}>
-                {n.note} <span className="text-sm text-gray-500">({new Date(n.postedAt).toLocaleString()})</span>
-              </li>
-            ))}
-          </ul>
-        ) : (
-          <p>No notes yet.</p>
-        )}
-      </div>
+     
     </div>
   );
 };
 
 
-export default FoodDetails;
+export default ViewDetails;

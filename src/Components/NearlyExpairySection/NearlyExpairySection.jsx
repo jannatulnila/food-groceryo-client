@@ -31,7 +31,7 @@ const NearlyExpairySection = () => {
     return (
         <div className="py-12 max-w-6xl mx-auto px-4">
 
-            <h2 className="text-3xl font-bold text-center mb-8">Foods Expiring Soon</h2>
+            <h2 className="text-3xl font-bold text-primary  text-center mb-8">Foods Expiring Soon</h2>
             <div className="grid gap-6 md:grid-cols-2">
                 {foods.map(({ _id, image, title, category, quantity, expiryDate, index }) => (
                         <motion.div
@@ -46,8 +46,8 @@ const NearlyExpairySection = () => {
                                 delay: index * 0.3
                             }}
                         >
-                        <div>
-                            <img src={image} alt={title} className="w-full h-40 object-cover rounded-md mb-4" />
+                        <div className="w-40 h-40 overflow-hidden rounded-md flex-shrink-0">
+                            <img src={image} alt={title} className="w-full h-40 object-contain rounded-md mb-4" />
                         </div>
                         <div>
                             <h3 className="text-xl font-semibold">{title}</h3>
