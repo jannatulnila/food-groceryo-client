@@ -5,7 +5,7 @@ The **Food Expiry Tracker System** is a full-stack web application that helps us
 It features authentication, secure database handling, responsive design, CRUD operations, and useful insights — all designed with recruiter-friendly UI/UX in mind.
 
 
-#[Visit Live Website] : https://food-grocaryo.web.app
+#[Visit Live Website] : https://warm-dieffenbachia-f5c379.netlify.app/
 
 
 
