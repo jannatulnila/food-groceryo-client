@@ -44,7 +44,7 @@ const Footer = () => {
     </>
   );
   return (
-    <footer className="bg-primary  text-base-content pt-10 pb-6">
+    <footer className="bg-primary dark:bg-gray-800  text-base-content pt-10 pb-6">
       <div className="max-w-7xl mx-auto px-4 grid gap-8 md:grid-cols-4">
         <div>
           <Link to="/" className="text-2xl font-bold text-primary flex items-center gap-2">
@@ -69,16 +69,16 @@ const Footer = () => {
         <div>
           <h2 className="text-xl font-bold mb-2 text-white">Follow Us</h2>
           <div className="flex justify-center md:justify-start gap-4 text-lg">
-            <a href="https://facebook.com" className="btn btn-sm btn-circle bg-white text-primary hover:bg-white">
+            <a href="https://facebook.com" className="btn btn-sm btn-circle bg-white text-primary dark:text-[#FFC107] hover:bg-white">
               <FaFacebook />
             </a>
-            <a href="https://twitter.com" className="btn btn-sm btn-circle bg-white text-primary hover:bg-white">
+            <a href="https://twitter.com" className="btn btn-sm btn-circle dark:text-[#FFC107]  bg-white text-primary hover:bg-white">
               <FaTwitter />
             </a>
-            <a href="https://instagram.com" className="btn btn-sm btn-circle bg-white text-primary hover:bg-white">
+            <a href="https://instagram.com" className="btn btn-sm btn-circle dark:text-[#FFC107]  bg-white text-primary hover:bg-white">
               <FaInstagram />
             </a>
-            <a href="mailto:support@gardenhub.com" className="btn btn-sm btn-circle bg-white text-primary hover:bg-white">
+            <a href="mailto:support@gardenhub.com" className="btn btn-sm dark:text-[#FFC107]  btn-circle bg-white text-primary hover:bg-white">
               <FaEnvelope />
             </a>
           </div>

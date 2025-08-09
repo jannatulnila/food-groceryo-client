@@ -3,24 +3,24 @@ import { AuthContext } from '../../contexts/AuthContext';
 import { Link, Navigate, useLocation, useNavigate } from 'react-router';
 
 const Login = () => {
-    const {signInUser, GoogleSignIn} = use(AuthContext);
+    const { signInUser, GoogleSignIn } = use(AuthContext);
     const navigate = useNavigate();
     const location = useLocation();
-    const from = location.state || '/';     
-    const handleLogin = e=>{
+    const from = location.state || '/';
+    const handleLogin = e => {
         e.preventDefault();
-         const form = e.target;
+        const form = e.target;
         const email = form.email.value;
         const password = form.password.value;
 
-        signInUser(email,password)
-        .then(result =>{
-            console.log(result);
-            navigate(from)
-        })
-        .catch(error=>{
-            console.log(error)
-        })
+        signInUser(email, password)
+            .then(result => {
+                console.log(result);
+                navigate(from)
+            })
+            .catch(error => {
+                console.log(error)
+            })
     }
 
     const handleGoogleSignIn = e => {
@@ -39,9 +39,15 @@ const Login = () => {
         <div>
             <div className='flex justify-center items-center mt-8 mb-8'>
                 <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                    <div>
+                        <Link to="/" className="text-xl font-bold text-white md:text-[#FFC107] flex btn btn-ghost ">
+                            <img src="https://i.ibb.co/bgM4k74g/icons8-shopping-cart-100.png" alt=""
+                                className="w-[72px] h-[72px]" />
+                        </Link>
+                    </div>
                     <p className='font-semibold text-xl text-center mt-4'>Log in with </p>
                     <form onSubmit={handleLogin} className="card-body">
-                        
+
                         <fieldset className="fieldset">
                             {/* Google */}
                             <button type='button' onClick={handleGoogleSignIn} className="btn bg-white text-black border-[#e5e5e5]">
@@ -56,7 +62,7 @@ const Login = () => {
 
                             {/* email */}
                             <label className="label">Email</label>
-                            <input type="email"  name='email' className="input" placeholder="Email" required />  
+                            <input type="email" name='email' className="input" placeholder="Email" required />
                             {/* ref={emailRef} */}
                             {/* password */}
                             <label className="label">Password</label>
@@ -67,10 +73,10 @@ const Login = () => {
 
                             {/* {error && <p className='text-red-500 text-sm'> {error} </p>} */}
 
-                            <button type='submit' className="btn btn-primary mt-4">Login</button>
-                           
+                            <button type='submit' className="btn btn-primary dark:bg-[#FFC107] mt-4">Login</button>
+
                             <p className='font-semibold text-center pt-5'>Don't have an account?<Link
-                            className='text-primary underline' to="/register">Register</Link> </p>
+                                className='text-primary dark:text-[#FFC107] underline' to="/register">Register</Link> </p>
                         </fieldset>
                     </form>
 

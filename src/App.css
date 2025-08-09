@@ -14,5 +14,4 @@
 *{
    font-family: "Poppins", sans-serif;
 }
-
-@custom-variant dark (&:where(.dark, .dark *));
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));

@@ -29,14 +29,14 @@ const NearlyExpairySection = () => {
     if (error) return <p className="text-center text-red-500">{error}</p>;
 
     return (
-        <div className="py-12 max-w-6xl mx-auto px-4">
+        <div className="py-12 w-10/12  mx-auto px-4">
 
-            <h2 className="text-3xl font-bold text-primary  text-center mb-8">Foods Expiring Soon</h2>
+            <h2 className="text-3xl font-bold text-primary dark:text-[#FFC107]  text-center mb-8">Foods Expiring Soon</h2>
             <div className="grid gap-6 md:grid-cols-2">
                 {foods.map(({ _id, image, title, category, quantity, expiryDate, index }) => (
                         <motion.div
                             key={_id}
-                            className="bg-white rounded-xl shadow-md overflow-hidden flex flex-col md:flex-row gap-4 p-4"
+                            className="bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden flex flex-col md:flex-row gap-4 p-4"
                             initial={{ opacity: 0, y: 80 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}

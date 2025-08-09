@@ -1,6 +1,6 @@
 import React, { use, useState } from 'react';
 import { AuthContext } from '../contexts/AuthContext';
-import { Link,  useNavigate } from 'react-router';
+import { Link, useNavigate } from 'react-router';
 import Swal from 'sweetalert2';
 import axios from 'axios';
 
@@ -9,7 +9,7 @@ const Register = () => {
     const [errorMessage, setErrorMessage] = useState('');
     const [success, setSuccess] = useState(false);
     const navigate = useNavigate();
-    
+
 
     const handleRegister = (e) => {
         e.preventDefault();
@@ -93,6 +93,10 @@ const Register = () => {
     return (
         <div className='flex justify-center items-center '>
             <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                <Link to="/" className="text-xl font-bold text-white md:text-[#FFC107] flex btn btn-ghost ">
+                    <img src="https://i.ibb.co/bgM4k74g/icons8-shopping-cart-100.png" alt=""
+                        className="w-[72px] h-[72px]" />
+                </Link>
                 <p className='font-semibold text-xl text-center mt-4'>Register your Account </p>
                 <form onSubmit={handleRegister} className="card-body">
                     <fieldset className="fieldset">
@@ -117,8 +121,8 @@ const Register = () => {
                             required
                         />
 
-                        <button type='submit' className="btn btn-primary mt-4">Register</button>
-                        <p className='font-semibold text-center pt-5'>Already have an account?<Link className='text-primary underline' to="/login">Login</Link> </p>
+                        <button type='submit' className="btn btn-primary dark:bg-[#FFC107] mt-4">Register</button>
+                        <p className='font-semibold text-center pt-5'>Already have an account?<Link className='text-primary underline dark:text-[#FFC107]' to="/login">Login</Link> </p>
                     </fieldset>
                 </form>
                 {

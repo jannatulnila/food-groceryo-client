@@ -15,7 +15,8 @@ import Fridge from '../pages/Fridge/Fridge';
 import Spinner from '../pages/loading';
 import ErrorPage from '../pages/ErrorPage';
 import AllExpiredFoods from '../pages/AllExpiredFoods/AllExpiredFoods';
-import Support from '../pages/Support.jsx/Support';
+import Support from '../pages/Support/Support';
+
 
 
 const router = createBrowserRouter([
@@ -38,7 +39,7 @@ const router = createBrowserRouter([
       },
       {
         path: '/foods/:id',
-       element:<PrivateRoute><FoodDetails></FoodDetails></PrivateRoute>
+       element:<FoodDetails></FoodDetails>
       },
       {
         path:'/support',

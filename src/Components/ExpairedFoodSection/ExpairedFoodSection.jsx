@@ -23,8 +23,8 @@ const ExpairedFoodSection = () => {
 
 
     return (
-        <div className=" p-4 w-11/12 mx-auto">
-            <h2 className="text-2xl font-bold text-primary text-center mb-4">Expired Food Items</h2>
+        <div className=" p-4 w-10/12 mx-auto">
+            <h2 className="text-2xl font-bold text-primary dark:text-[#FFC107] text-center mb-4">Expired Food Items</h2>
             <p className=" text-semibold text-center mb-2">
                 Expired Food Items ({expairedFood.length})
             </p>
@@ -35,7 +35,7 @@ const ExpairedFoodSection = () => {
                     displayedFoods.map((food, index) => (
                         <motion.div
                             key={food._id}
-                            className="bg-red-200 rounded-xl shadow-md overflow-hidden flex flex-col md:flex-row gap-4 p-4"
+                            className="bg-red-200 rounded-xl dark:bg-red-800 shadow-md overflow-hidden flex flex-col md:flex-row gap-4 p-4"
                             initial={{ opacity: 0, y: 80 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
@@ -57,7 +57,7 @@ const ExpairedFoodSection = () => {
                                 <p><strong>Category:</strong> {food.category}</p>
                                 <p><strong>Quantity:</strong> {food.quantity}</p>
                                 <p><strong>Expiry Date:</strong> {new Date(food.expiryDate).toLocaleDateString()}</p>
-                                <span className="absolute top-2 right-2 bg-red-600 text-white px-2 py-1 rounded text-xs font-bold">
+                                <span className="absolute top-2 right-2 bg-red-600 dark:bg-red-400 dark:text-black text-white px-2 py-1 rounded text-xs font-bold">
                                     Expired
                                 </span>
                             </div>

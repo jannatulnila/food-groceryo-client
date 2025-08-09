@@ -49,7 +49,7 @@ const Fridge = () => {
     return (
         <div className="p-6 max-w-7xl mx-auto ">
             <div >
-                <h2 className="text-3xl font-bold text-primary  text-center mb-6">Fridge Inventory</h2>
+                <h2 className="text-3xl font-bold text-primary dark:text-[#FFC107] text-center mb-6">Fridge Inventory</h2>
 
             </div>
             <div className="mb-6 text-center">
@@ -75,14 +75,14 @@ const Fridge = () => {
                 </select>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-10/12 mx-auto">
                 {sortedFoods.map(food => {
                     const isExpired = new Date(food.expiryDate) < today;
 
                     return (
                         <div
                             key={food._id}
-                            className=" relative bg-white rounded-xl shadow-md overflow-hidden flex flex-col md:flex-row gap-4 p-4"
+                            className=" relative bg-white dark:bg-gray-800 rounded-xl shadow-md  overflow-hidden flex flex-col md:flex-row gap-4 p-4"
                         >
                             <div className='w-40 h-40 overflow-hidden rounded-md flex-shrink-0'>
                                 <img
@@ -93,9 +93,9 @@ const Fridge = () => {
                             </div>
                             <div>
                                 <h3 className="text-xl font-semibold">{food.title}</h3>
-                                <p className="text-gray-600">Category: {food.category}</p>
-                                <p className="text-gray-600">Quantity: {food.quantity}</p>
-                                <p className="text-gray-600">
+                                <p className="text-gray-600 dark:text-gray-400">Category: {food.category}</p>
+                                <p className="text-gray-600 dark:text-gray-400">Quantity: {food.quantity}</p>
+                                <p className="text-gray-600 dark:text-gray-400">
                                     Expiry: {new Date(food.expiryDate).toLocaleDateString()}
                                 </p>
 
@@ -105,7 +105,7 @@ const Fridge = () => {
                                     </span>
                                 )}
 
-                                <Link to={`/foods/${food._id}`} className="btn btn-sm btn-primary mt-3">See Details</Link>
+                                <Link to={`/foods/${food._id}`} className="btn btn-sm btn-primary dark:bg-[#FFC107] mt-3">See Details</Link>
                             </div>
                         </div>
                     );
