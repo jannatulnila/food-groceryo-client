@@ -121,8 +121,8 @@ const Register = () => {
                             required
                         />
 
-                        <button type='submit' className="btn btn-primary dark:bg-[#FFC107] mt-4">Register</button>
-                        <p className='font-semibold text-center pt-5'>Already have an account?<Link className='text-primary underline dark:text-[#FFC107]' to="/login">Login</Link> </p>
+                        <button type='submit' className="btn bg-gradient-to-br from-amber-400 via-orange-500 to-red-500 text-white mt-4">Register</button>
+                        <p className='font-semibold text-center pt-5'>Already have an account?<Link className='bg-gradient-to-br from-amber-400 via-orange-500 to-red-500 bg-clip-text text-transparent underline' to="/login">Login</Link> </p>
                     </fieldset>
                 </form>
                 {

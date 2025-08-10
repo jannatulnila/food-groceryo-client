@@ -73,10 +73,10 @@ const Login = () => {
 
                             {/* {error && <p className='text-red-500 text-sm'> {error} </p>} */}
 
-                            <button type='submit' className="btn btn-primary dark:bg-[#FFC107] mt-4">Login</button>
+                            <button type='submit' className="btn bg-gradient-to-br from-amber-400 via-orange-500 to-red-500 text-white mt-4">Login</button>
 
                             <p className='font-semibold text-center pt-5'>Don't have an account?<Link
-                                className='text-primary dark:text-[#FFC107] underline' to="/register">Register</Link> </p>
+                                className=' bg-gradient-to-br from-amber-400 via-orange-500 to-red-500 bg-clip-text text-transparent underline' to="/register">Register</Link> </p>
                         </fieldset>
                     </form>
 

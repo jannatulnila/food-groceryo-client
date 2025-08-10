@@ -154,7 +154,7 @@ const RecentProducts = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
       >
-        <h2 className="text-3xl font-bold text-center text-primary  mb-2">
+        <h2 className="text-3xl font-bold text-center  bg-gradient-to-br from-amber-400 via-orange-500 to-red-500 bg-clip-text text-transparent mb-2">
           Recent Added Foods
         </h2>
         <p className="text-gray-600 dark:text-gray-300 text-sm">

@@ -732,29 +732,13 @@ const NearlyExpairySection = () => {
 
           {/* Subtitle */}
           <p 
-            className="text-xl text-slate-600 dark:text-slate-300 max-w-2xl mx-auto mb-4 leading-relaxed"
+            className="text-xl text-slate-600 dark:text-slate-300 max-w-2xl mx-auto mb-2 leading-relaxed"
             
           >
             Act fast! These delicious items are approaching their expiry dates. 
-            <span className="inline-flex items-center gap-1 ml-2 text-amber-600 font-semibold">
-              <Sparkles className="w-4 h-4" />
-              Don't miss out!
-            </span>
+          
           </p>
 
-          {/* Stats Badge */}
-          <div
-            className="inline-flex items-center gap-3 px-6 py-3 bg-white/80 dark:bg-slate-800/80 backdrop-blur-lg rounded-2xl shadow-lg border border-white/20 dark:border-slate-700/50"
-            
-          >
-            <TrendingUp className="w-5 h-5 text-amber-600" />
-            <span className="text-slate-700 dark:text-slate-300 font-medium">
-              Items Found:
-            </span>
-            <span className="font-bold text-2xl bg-gradient-to-r from-amber-600 to-orange-600 bg-clip-text text-transparent">
-              {foods.length}
-            </span>
-          </div>
         </div>
 
         {/* Content */}
@@ -763,11 +747,11 @@ const NearlyExpairySection = () => {
             <div
               className="text-center py-20"
             >
-              <div className="w-32 h-32 bg-gradient-to-br from-emerald-400 to-green-600 rounded-full flex items-center justify-center mx-auto mb-8 shadow-2xl">
-                <Star className="w-16 h-16 text-white" />
+              <div className="w-16 h-16 bg-gradient-to-br from-emerald-400 to-green-600 rounded-full flex items-center justify-center mx-auto mb-8 shadow-2xl">
+                <Star className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-3xl font-bold text-slate-700 dark:text-slate-200 mb-4">
-                All Fresh & Good! 🎉
+                All Fresh & Good! 
               </h3>
               <p className="text-slate-500 dark:text-slate-400 text-xl max-w-lg mx-auto">
                 Great news! No items are expiring soon. Your food storage management is on point!

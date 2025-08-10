@@ -322,7 +322,7 @@ const Fridge = () => {
   return (
     <div className="p-6 max-w-7xl mx-auto">
       {/* Header */}
-      <h2 className="text-3xl font-bold text-primary dark:text-amber-400 text-center mb-8">
+      <h2 className="text-3xl font-bold bg-gradient-to-br from-amber-400 via-orange-500 to-red-500 bg-clip-text text-transparent text-center mb-8">
         Fridge Inventory
       </h2>
 
