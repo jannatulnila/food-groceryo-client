@@ -72,14 +72,14 @@ const Banner = () => {
         {slides.map((slide) => (
           <div key={slide.id}>
             <div
-              className="  h-[300px] md:h-[600px] bg-cover bg-center flex items-center justify-center"
+              className="  h-[300px] md:h-[600px] bg-cover bg-center dark:opacity-60 flex items-center justify-center"
               style={{ backgroundImage: `url(${slide.image})` }}
             >
-              <div className="bg-amber-50 bg-opacity-20 p-6 md:p-10 rounded-xl text-gray-400 text-center max-w-2xl mx-4">
-                <h2 className="text-2xl md:text-4xl font-bold mb-3">
+              <div className="bg-amber-50 dark:bg-gray-800 bg-opacity-20 p-6 md:p-10 rounded-xl text-gray-400 text-center max-w-2xl mx-4">
+                <h2 className=" md:text-4xl  text-2xl font-bold bg-gradient-to-br from-amber-400 via-orange-500 to-red-500 bg-clip-text text-transparent mb-3">
                   {slide.title}
                 </h2>
-                <h4 className="text-2xl font-semibold">{slide.description}</h4>
+                <h4 className="text-2xl font-semibold dark:text-amber-100">{slide.description}</h4>
               </div>
             </div>
           </div>
