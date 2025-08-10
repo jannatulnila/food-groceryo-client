@@ -1,18 +1,3 @@
-// import React from 'react';
-
-// const DarkModeToggoler = () => {
-//     const dark = false;
-//     return (
-//         <div>
-//            <button>DarkModeToggoler </button>
-//         </div>
-//     );
-// };
-
-// export default DarkModeToggoler;
-
-
-import React from "react";
 import { useState, useEffect } from "react";
 
 const DarkModeToggoler = () => {
@@ -42,7 +27,6 @@ const DarkModeToggoler = () => {
         checked={theme === "dark"}
         onChange={handleThemeChange}
       />
-      ;
     </div>
   );
 };
