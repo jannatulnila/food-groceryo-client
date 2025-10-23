@@ -90,7 +90,7 @@ const Support = () => {
         transition={{ duration: 0.6 }}
       >
         <h2 className="text-xl md:text-2xl font-bold mb-4">
-          <span className="bg-gradient-to-br from-amber-400 via-orange-500 to-red-500 bg-clip-text text-transparent">
+          <span className="bg-primary bg-clip-text text-transparent">
             Support Center
           </span>
         </h2>
@@ -131,7 +131,7 @@ const Support = () => {
                 </h3>
                 
                 {/* Contact Info */}
-                <p className="text-lg font-semibold bg-gradient-to-br from-amber-400 via-orange-500 to-red-500 bg-clip-text text-transparent">
+                <p className="text-lg font-semibold bg-primary bg-clip-text text-transparent">
                   {option.contact}
                 </p>
                 
@@ -154,7 +154,7 @@ const Support = () => {
         transition={{ duration: 0.6, delay: 0.8 }}
       >
         <h3 className="text-2xl font-bold mb-4">
-          <span className="bg-gradient-to-br from-amber-400 via-orange-500 to-red-500 bg-clip-text text-transparent">
+          <span className="bg-primary bg-clip-text text-transparent">
             Need Immediate Help?
           </span>
         </h3>

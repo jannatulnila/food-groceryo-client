@@ -14,7 +14,7 @@
 //     <>
 //       <ul>
 //         <li>
-//           <NavLink to="/" className="px-3 py-2 rounded hover:text-white">Home</NavLink>
+//           <NavLink to="/" className="px-3 py-2 rounded hover:text-primary">Home</NavLink>
 //         </li>
 //         <li>
 //           <NavLink to="/fridge" className="px-3 py-2 rounded hover:text-white">Fridge</NavLink>
@@ -142,49 +142,49 @@ const Footer = () => {
   );
 
   return (
-    <footer className="bg-gradient-to-br from-amber-400 via-orange-500 to-red-500 text-white pt-10 pb-6">
+    <footer className="bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800 border border-t-2 border-primary text-primary pt-10 pb-6">
       <div className="max-w-7xl mx-auto px-4 grid gap-8 md:grid-cols-4">
         <div>
-          <Link to="/" className="text-2xl font-bold text-white flex items-center gap-2">
+          <Link to="/" className="text-2xl font-bold text-primary flex items-center gap-2">
             <img
               src="https://i.ibb.co/bgM4k74g/icons8-shopping-cart-100.png"
               alt="FoodGroceryo"
               className="w-10 h-10"
             />
-            <span className="text-xl font-bold text-white">FoodGroceryo</span>
+            <span className="text-xl font-bold text-primary">FoodGroceryo</span>
           </Link>
-          <p className="mt-2 text-sm text-white/90">
+          <p className="mt-2 text-sm text-primary/90">
             Smartly track expiry dates, reduce food waste, and organize your fridge with FoodGroceryo.
           </p>
         </div>
         
         <div>
-          <h4 className="text-xl font-bold mb-2 text-white">Quick Links</h4>
+          <h4 className="text-xl font-bold mb-2 text-primary">Quick Links</h4>
           {navLinks}
         </div>
         
         <div>
-          <h2 className="text-xl font-bold mb-2 text-white">Follow Us</h2>
+          <h2 className="text-xl font-bold mb-2 text-primary">Follow Us</h2>
           <div className="flex justify-center md:justify-start gap-4 text-lg">
-            <a href="https://facebook.com" className="btn btn-sm btn-circle bg-white/20 text-white backdrop-blur-sm hover:bg-white/30 transition-all border-0">
+            <a href="https://facebook.com" className="btn btn-sm btn-circle bg-white/20 text-primary backdrop-blur-sm hover:bg-white/30 transition-all border-0">
               <FaFacebook />
             </a>
-            <a href="https://twitter.com" className="btn btn-sm btn-circle bg-white/20 text-white backdrop-blur-sm hover:bg-white/30 transition-all border-0">
+            <a href="https://twitter.com" className="btn btn-sm btn-circle bg-white/20 text-primary backdrop-blur-sm hover:bg-white/30 transition-all border-0">
               <FaTwitter />
             </a>
-            <a href="https://instagram.com" className="btn btn-sm btn-circle bg-white/20 text-white backdrop-blur-sm hover:bg-white/30 transition-all border-0">
+            <a href="https://instagram.com" className="btn btn-sm btn-circle bg-white/20 text-primary backdrop-blur-sm hover:bg-white/30 transition-all border-0">
               <FaInstagram />
             </a>
-            <a href="mailto:support@gardenhub.com" className="btn btn-sm btn-circle bg-white/20 text-white backdrop-blur-sm hover:bg-white/30 transition-all border-0">
+            <a href="mailto:support@gardenhub.com" className="btn btn-sm btn-circle bg-white/20 text-primary backdrop-blur-sm hover:bg-white/30 transition-all border-0">
               <FaEnvelope />
             </a>
           </div>
         </div>
         
         <div className="md:text-right">
-          <h4 className="font-semibold text-white text-lg mb-3">About</h4>
-          <p className="text-sm text-white/90">Built with by the Food Tracker Team</p>
-          <p className="mt-4 text-xs text-white/70">&copy; {new Date().getFullYear()} Food Expiry Tracker. All rights reserved.</p>
+          <h4 className="font-semibold text-primary text-lg mb-3">About</h4>
+          <p className="text-sm text-primary/90">Built with by the Food Tracker Team</p>
+          <p className="mt-4 text-xs text-primary/70">&copy; {new Date().getFullYear()} Food Expiry Tracker. All rights reserved.</p>
         </div>
       </div>
     </footer>

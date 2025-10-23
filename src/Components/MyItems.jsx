@@ -279,7 +279,7 @@
 //             <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800 flex items-center justify-center">
 //                 <div className="text-center">
 //                     <div className="animate-spin rounded-full h-16 w-16 border-4 border-amber-400 border-t-transparent mx-auto mb-4"></div>
-//                     <p className="text-lg bg-gradient-to-br from-amber-400 via-orange-500 to-red-500 bg-clip-text text-transparent font-semibold">
+//                     <p className="text-lg bg-primary bg-clip-text text-transparent font-semibold">
 //                         Loading your food items...
 //                     </p>
 //                 </div>
@@ -298,7 +298,7 @@
 //                     transition={{ duration: 0.6 }}
 //                 >
 //                     <h2 className="text-4xl md:text-5xl font-bold mb-4">
-//                         <span className="bg-gradient-to-br from-amber-400 via-orange-500 to-red-500 bg-clip-text text-transparent">
+//                         <span className="bg-primary bg-clip-text text-transparent">
 //                             My Food Items
 //                         </span>
 //                     </h2>
@@ -308,7 +308,7 @@
 //                     <div className="inline-flex items-center bg-white dark:bg-gray-800 rounded-full px-6 py-3 shadow-lg border border-gray-200 dark:border-gray-700">
 //                         <FaUtensils className="text-amber-500 mr-2" />
 //                         <span className="text-sm text-gray-600 dark:text-gray-400 mr-2">Total Items:</span>
-//                         <span className="font-bold text-lg bg-gradient-to-br from-amber-400 via-orange-500 to-red-500 bg-clip-text text-transparent">
+//                         <span className="font-bold text-lg bg-primary bg-clip-text text-transparent">
 //                             {foods.length}
 //                         </span>
 //                     </div>
@@ -429,7 +429,7 @@
 //                                                     <div className="flex items-center justify-center gap-2">
 //                                                         <button
 //                                                             onClick={() => setSelectedFood(food)}
-//                                                             className="bg-gradient-to-br from-amber-400 via-orange-500 to-red-500 text-white px-3 py-2 rounded-lg hover:scale-105 transition-transform duration-200 font-semibold text-sm flex items-center gap-1"
+//                                                             className="bg-primary text-white px-3 py-2 rounded-lg hover:scale-105 transition-transform duration-200 font-semibold text-sm flex items-center gap-1"
 //                                                             title="Update food item"
 //                                                         >
 //                                                             <FaEdit className="text-xs" />
@@ -467,7 +467,7 @@
 //                                 {/* Modal Header */}
 //                                 <div className="flex items-center justify-between mb-6">
 //                                     <h3 className="text-2xl font-bold">
-//                                         <span className="bg-gradient-to-br from-amber-400 via-orange-500 to-red-500 bg-clip-text text-transparent">
+//                                         <span className="bg-primary bg-clip-text text-transparent">
 //                                             Update Food Item
 //                                         </span>
 //                                     </h3>
@@ -536,7 +536,7 @@
 //                                             className={`flex-1 py-3 px-4 rounded-lg font-semibold text-white transition-all duration-200 flex items-center justify-center gap-2 ${
 //                                                 isUpdating
 //                                                     ? 'bg-gray-400 cursor-not-allowed'
-//                                                     : 'bg-gradient-to-br from-amber-400 via-orange-500 to-red-500 hover:scale-105'
+//                                                     : 'bg-primary hover:scale-105'
 //                                             }`}
 //                                         >
 //                                             {isUpdating ? (
@@ -648,11 +648,11 @@ const MyItems = () => {
 
     return (
         <div className="max-w-6xl mx-auto p-6">
-            <h2 className="text-3xl font-bold text-center mb-8 bg-gradient-to-br from-amber-400 via-orange-500 to-red-500 bg-clip-text text-transparent">My Food Items</h2>
+            <h2 className="text-3xl font-bold text-center mb-8 bg-primary bg-clip-text text-transparent">My Food Items</h2>
             
             <div className="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
                 <table className="w-full">
-                    <thead className="bg-gradient-to-br from-amber-400 via-orange-500 to-red-500 ">
+                    <thead className="bg-primary ">
                         <tr>
                             <th className="px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider">Food Item</th>
                             <th className="px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider">Quantity</th>
@@ -679,7 +679,7 @@ const MyItems = () => {
                                 <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
                                     <button 
                                         onClick={() => setSelectedFood(food)}
-                                        className="bg-gradient-to-br from-amber-400 via-orange-500 to-red-500 text-white px-3 py-1 rounded-md hover:shadow-md transition-all mr-3 text-sm font-medium"
+                                        className="bg-primary text-white px-3 py-1 rounded-md hover:shadow-md transition-all mr-3 text-sm font-medium"
                                     >
                                         Edit
                                     </button>
@@ -707,7 +707,7 @@ const MyItems = () => {
                 <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
                     <div className="bg-white rounded-lg shadow-xl w-full max-w-md">
                         <div className="p-6">
-                            <h3 className="text-xl font-semibold mb-4 bg-gradient-to-br from-amber-400 via-orange-500 to-red-500 bg-clip-text text-transparent">Update Food Item</h3>
+                            <h3 className="text-xl font-semibold mb-4 bg-primary bg-clip-text text-transparent">Update Food Item</h3>
                             <form onSubmit={handleUpdate} className="space-y-4">
                                 <input 
                                     name="title" 
@@ -738,7 +738,7 @@ const MyItems = () => {
                                     </button>
                                     <button 
                                         type="submit"
-                                        className="px-6 py-2 bg-gradient-to-br from-amber-400 via-orange-500 to-red-500 text-white rounded-md hover:shadow-lg transition-all font-medium"
+                                        className="px-6 py-2 bg-primary text-white rounded-md hover:shadow-lg transition-all font-medium"
                                     >
                                         Save Changes
                                     </button>

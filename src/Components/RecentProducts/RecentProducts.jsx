@@ -154,7 +154,7 @@ const RecentProducts = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
       >
-        <h2 className="text-3xl font-bold text-center  bg-gradient-to-br from-amber-400 via-orange-500 to-red-500 bg-clip-text text-transparent mb-2">
+        <h2 className="text-3xl font-bold text-center  bg-primary bg-clip-text text-transparent mb-2">
           Recent Added Foods
         </h2>
         <p className="text-gray-600 dark:text-gray-300 text-sm">
@@ -164,7 +164,7 @@ const RecentProducts = () => {
 
       {/* Products Grid */}
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-        {foods.map(({ _id, image, title, category, quantity, expiryDate }, index) => (
+        {foods.map(({ _id, image, title, quantity, expiryDate }, index) => (
           <motion.div
             key={_id}
             className="bg-white rounded-xl shadow-md dark:bg-gray-800 flex flex-col overflow-hidden hover:shadow-lg transition-all duration-300 border border-gray-100 dark:border-gray-700 hover:border-primary/20 dark:hover:border-[#FFC107]/20 group"
@@ -213,7 +213,7 @@ const RecentProducts = () => {
               <div className="mt-auto">
                 <Link
                   to={`/foods/${_id}`}
-                  className="btn btn-primary bg-gradient-to-br from-amber-400 via-orange-500 to-red-500 w-full text-center hover:scale-[1.02] transition-transform duration-200"
+                  className="btn btn-primary bg-primary w-full text-center hover:scale-[1.02] transition-transform duration-200"
                   onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
                 >
                   See Details
