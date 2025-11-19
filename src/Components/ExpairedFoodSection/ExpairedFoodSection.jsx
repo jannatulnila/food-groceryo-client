@@ -58,7 +58,7 @@ const ExpairedFoodSection = () => {
   );
 
   return (
-    <div className="min-h-screen bg-white dark:bg-slate-900 py-12 px-4">
+    <div className="min-h-screen bg-white dark:bg-slate-900 py-12 px-4 lg:px-12">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12">

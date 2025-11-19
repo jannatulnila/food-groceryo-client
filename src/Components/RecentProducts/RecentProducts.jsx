@@ -146,7 +146,7 @@ const RecentProducts = () => {
   }, []);
 
   return (
-    <div className="py-12 w-11/12 mx-auto px-4">
+    <div className="min-h-screen bg-white dark:bg-slate-900 py-16 px-4 lg:px-12">
       {/* Header Section */}
       <motion.div
         className="text-center mb-8"
